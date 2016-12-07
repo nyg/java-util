@@ -3,9 +3,9 @@ package ch.nyg.java.util;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public final class LogUtils {
+public final class LogUtil {
 
-    private static final Logger LOGGER = Logger.getLogger(LogUtils.class.getSimpleName());
+    private static final Logger LOGGER = Logger.getLogger(LogUtil.class.getSimpleName());
 
     public static void severe(Throwable t) {
         LOGGER.log(Level.SEVERE, t.getMessage(), t);
@@ -24,12 +24,12 @@ public final class LogUtils {
     }
 
     public static void json(Object o) {
-        LOGGER.info(JsonUtils.serialize(o));
+        LOGGER.info(JsonUtil.serialize(o));
     }
 
     public static void xml(Object o) {
-        LOGGER.info(XmlUtils.serialize(o));
+        LOGGER.info(XmlUtil.serialize(o));
     }
 
-    private LogUtils() {}
+    private LogUtil() {}
 }

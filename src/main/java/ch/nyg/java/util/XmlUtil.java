@@ -2,7 +2,7 @@ package ch.nyg.java.util;
 
 import com.thoughtworks.xstream.XStream;
 
-public final class XmlUtils {
+public final class XmlUtil {
 
     private static final XStream XSTREAM = new XStream();
 
@@ -10,5 +10,5 @@ public final class XmlUtils {
         return XSTREAM.toXML(object);
     }
 
-    private XmlUtils() {}
+    private XmlUtil() {}
 }

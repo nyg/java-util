@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-public final class DateUtils {
+public final class DateUtil {
 
     public static final String DATE_FORMAT = "dd.MM.yyyy";
     public static final String DATE_JSON_FORMAT = "yyyy-MM-dd";
@@ -33,5 +33,5 @@ public final class DateUtils {
         return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
-    private DateUtils() {}
+    private DateUtil() {}
 }

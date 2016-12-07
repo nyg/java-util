@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
-public final class JsonUtils {
+public final class JsonUtil {
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper().setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
     private static final ObjectWriter JSON_WRITER = OBJECT_MAPPER.writerWithDefaultPrettyPrinter();
@@ -19,7 +19,7 @@ public final class JsonUtils {
             return JSON_WRITER.writeValueAsString(object);
         }
         catch (JsonProcessingException e) {
-            LogUtils.severe(e);
+            LogUtil.severe(e);
             throw new IllegalArgumentException("Object could not be serialized. Check logs.");
         }
     }
@@ -29,7 +29,7 @@ public final class JsonUtils {
             return OBJECT_MAPPER.readTree(string);
         }
         catch (IOException e) {
-            LogUtils.severe(e);
+            LogUtil.severe(e);
             throw new IllegalArgumentException("String could not be parsed. Check logs.");
         }
     }
@@ -39,10 +39,10 @@ public final class JsonUtils {
             return OBJECT_MAPPER.readValue(file, clazz);
         }
         catch (IOException e) {
-            LogUtils.severe(e);
+            LogUtil.severe(e);
             throw new IllegalArgumentException("File could not be deserialized. Check logs.");
         }
     }
 
-    private JsonUtils() {}
+    private JsonUtil() {}
 }

@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import ch.nyg.java.util.LogUtils;
+import ch.nyg.java.util.LogUtil;
 
 public class CSVFile implements Iterable<CSVLine> {
 
@@ -51,7 +51,7 @@ public class CSVFile implements Iterable<CSVLine> {
             }
             catch (FileNotFoundException e) {
                 // Ignore, check is made above
-                LogUtils.severe(e);
+                LogUtil.severe(e);
             }
         }
 
@@ -63,7 +63,7 @@ public class CSVFile implements Iterable<CSVLine> {
                 next = currentLine != null;
             }
             catch (IOException e) {
-                LogUtils.severe(e);
+                LogUtil.severe(e);
                 next = false;
             }
 

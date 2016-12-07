@@ -79,7 +79,7 @@ public class ApproxEqualUtil {
                 }
             }
             catch (Exception e) {
-                LogUtils.severe(e);
+                LogUtil.severe(e);
                 return false;
             }
         }
