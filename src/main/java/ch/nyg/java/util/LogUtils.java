@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 public final class LogUtils {
 
-    private static final Logger LOGGER = Logger.getLogger(LogUtils2.class.getSimpleName());
+    private static final Logger LOGGER = Logger.getLogger(LogUtils.class.getSimpleName());
 
     public static void severe(Throwable t) {
         LOGGER.log(Level.SEVERE, t.getMessage(), t);
