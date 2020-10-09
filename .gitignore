@@ -1,5 +1,3 @@
-/target/
 .DS_Store
-.classpath
-.project
-.settings
+.idea
+java-util.iml
